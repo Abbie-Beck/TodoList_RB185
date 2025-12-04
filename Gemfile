@@ -5,5 +5,6 @@ gem "sinatra-contrib"
 gem "erubis"
 gem "webrick"
 gem "puma"
+gem "pg"
 
 ruby "3.2.2"
