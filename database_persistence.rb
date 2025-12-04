@@ -6,9 +6,7 @@ class DatabasePersistence
       PG.connect(ENV['DATABASE_URL'])
     else
       PG.connect(dbname: "todos")
-  end
-end
-
+    end 
   end
 
   def query(statement, *params)
