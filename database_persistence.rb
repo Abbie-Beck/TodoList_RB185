@@ -52,9 +52,9 @@ class DatabasePersistence
     query(sql, new_name, id)
   end
 
-  def create_new_todo(todo_name, list_id)
-    sql = "INSERT INTO todos (name, list_id) VALUES ($1, $2)"
-    query(sql, todo_name, list_id)
+  def create_new_todo(list_id, todo_name)
+    sql = "INSERT INTO todos (list_id, name) VALUES ($1, $2)"
+    query(sql, list_id, todo_name)
   end
 
   def delete_todo_from_list(list_id, todo_id)
@@ -62,7 +62,7 @@ class DatabasePersistence
     query(sql, todo_id, list_id)
   end
 
-  def update_todo_status(new_status, todo_id, list_id)
+  def update_todo_status(list_id, todo_id, new_status)
     sql = "UPDATE todos SET completed = $1 WHERE id = $2 AND list_id = $3"
     query(sql, new_status, todo_id, list_id)
   end
