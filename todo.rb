@@ -6,7 +6,7 @@ require_relative "database_persistence"
 configure do
   enable :sessions
   set :session_secret, (ENV['SESSION_SECRET'].to_s.length >= 64 ? ENV['SESSION_SECRET'] : SecureRandom.hex(64))
-  set :erb, :escape_html => true, engine_class: Tilt::ErubisTemplate
+  set :erb, :escape_html => true
 end
 
 configure(:development) do 
