@@ -36,9 +36,8 @@ DEPENDENCIES
   erubis
   pg
   puma
-  sinatra (= 3.0.6)
+  sinatra
   sinatra-contrib
-  tilt (= 2.3.0)
   webrick
 
 RUBY VERSION
